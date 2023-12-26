@@ -7,7 +7,10 @@ c = conn.cursor()
 
 #delete_statement = f"DELETE FROM post_Forum WHERE udid = '{username_to_delete}'"
 
-delete_statement = "DELETE FROM Register"
+delete_statement = "DELETE FROM Register where udid = '987bb52ed20343eb'"''
+
+# sql_statement = "UPDATE Register SET image = NULL WHERE udid = '987bb52ed20343eb'"
+
 
 c.execute(delete_statement)
 

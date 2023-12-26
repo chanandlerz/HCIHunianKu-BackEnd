@@ -178,7 +178,7 @@ def pubKey():
 def add_property():
   # request = [udid, username, password]
   data = request.get_json()
-  print(data)
+  #print(data)
 
   # token = data.get('token')
   udid = data.get('udid')
@@ -256,7 +256,7 @@ def get_all_beli_rumah():
 def filter_property():
   # request = [udid, username, password]
   data = request.get_json()
-  print(data)
+  #print(data)
 
   ### Get all data
   udid = data.get('udid')
@@ -341,7 +341,7 @@ def filter_property():
 
   filteredData = cursor.fetchall()
   print('filteredData:')
-  print(filteredData)
+  #print(filteredData)
 
   conn.commit()
 
@@ -550,7 +550,7 @@ def send_detail_property():
 def favorites_data():
   # request = [udid, username, password]
   data = request.get_json()
-  print(data)
+  #print(data)
 
   favorites = data.get('favorites')
   print(favorites)
@@ -708,7 +708,7 @@ def get_post_komen():
 def get_all_komen():
   data = request.get_json()
   id = data.get('id')
-  
+
   conn = sqlite3.connect('userdb.db')
   cursor = conn.cursor()
 
@@ -839,7 +839,7 @@ UPDATE properties SET Status = ? WHERE id = ?""", (
 @app.route('/listForum', methods=['POST'])
 def myListingForum():
   data = request.get_json()
-  print(data)
+  # print(data)
 
   udid = data.get('udid')
 
@@ -849,7 +849,7 @@ def myListingForum():
   cursor.execute("SELECT * FROM Forum WHERE udid=?", (udid, ))
 
   listingForum = cursor.fetchall()
-  print(listingForum)
+  # print(listingForum)
 
   conn.commit()
 

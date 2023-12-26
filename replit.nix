@@ -1,4 +1,4 @@
-{ pkgs }: {
+{pkgs}: {
   deps = [
     pkgs.rustc
     pkgs.pkg-config
@@ -6,8 +6,11 @@
     pkgs.libxcrypt
     pkgs.libiconv
     pkgs.cargo
-    pkgs.ls /nix/store/*-python*/bin
-    pkgs.ccc
-    pkgs.python39Packages.clvm-tools
   ];
+  env = {
+    PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+      pkgs.rustc
+      pkgs.libxcrypt
+    ];
+  };
 }

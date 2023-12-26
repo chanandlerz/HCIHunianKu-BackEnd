@@ -56,20 +56,20 @@ c = conn.cursor()
 # """
 
 #---Post Komen Table---
-SQL_STATEMENT = """
-CREATE TABLE IF NOT EXISTS komen2 (
-    id INTEGER,
-    udid VARCHAR(30),
-    username VARCHAR(30),
-    komen VARCHAR(300)
-)
-"""
-
-#---Add Column to Table---
 # SQL_STATEMENT = """
-# ALTER TABLE properties
-# ADD desc text;
+# CREATE TABLE IF NOT EXISTS komen2 (
+#     id INTEGER,
+#     udid VARCHAR(30),
+#     username VARCHAR(30),
+#     komen VARCHAR(300)
+# )
 # """
+
+# ---Add Column to Table---
+SQL_STATEMENT = """
+ALTER TABLE properties
+ADD desc text;
+"""
 
 #---Profile Picture Table---
 # SQL_STATEMENT = """
