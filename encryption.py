@@ -40,14 +40,3 @@ def fetchPubKey():
   stringKey = public_key.public_bytes(encoding=serialization.Encoding.PEM, format=serialization.PublicFormat.SubjectPublicKeyInfo).decode('utf-8')
 
   return stringKey
-
-
-# message = "fredo"
-
-# print("==========TEST===================")
-# ciphertext = encrypt_message(message)
-# print("Encrypted message:", ciphertext)
-
-# decrypted_message = decrypt_message(ciphertext)
-# print("Decrypted message:", decrypted_message)
-# print("==========TEST===================")
